@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <title>Playground</title>
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(90, 88, 88);
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 2.5rem;
+        }
+
+        .end-result {
+            height: 75vh;
+            width: 90%;
+            border-radius: 5px;
+            margin: auto;
+            background: rgb(158, 13, 158);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        #results {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compounding Dividend Yield Calculator</h1>
+    <p>See your money grow with dividends...</p>
+
+    <form class="form dividend-form" id="div-yield-form">
+        <label for="initial-inv">How much did you invest? Enter in USD:</label>
+        <input name="initial-inv" id="initial-inv" type="number" min="0" max="1000000000000" required>
+
+        <label for="yield">What was the dividend yield per quarter (4% annually = 1% per quarter)?:</label>
+        <input name="yield" id="yield" type="number" min="0" max="4.5" step="0.1" required>
+
+        <label for="inv-duration">How long will you invest your money? Enter in quarters: </label>
+        <input name="inv-duration" id="inv-duration" type="number" min="1" max="1000" step="1" required>
+
+        <button type="submit" onclick="dividendCompound()">Submit</button>
+    </form>
+    <div class="end-result" id="result-box">
+        <p id="results">Result: NaN</p>
+    </div>
+
+    <script src="play.js"></script>
+</body>
+</html>
