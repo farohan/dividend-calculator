@@ -28,7 +28,7 @@ entireForm.addEventListener('submit', handleForm);
 let finalAmount; 
 
 function dividendCompound() {
-    finalAmount = initField.value * Math.pow(1 + (yieldInput.value / timesCompounded), durationInput.value * timesCompounded);
+    finalAmount = initField.value * Math.pow((1 + yieldInput.value / timesCompounded), durationInput.value * timesCompounded);
     resultBox.style.display = 'block';
     results.innerHTML = `By the end of ${durationInput.value} quarters, you will have about $${Math.floor(finalAmount)}`;
 }
