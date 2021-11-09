@@ -30,8 +30,6 @@
         }
 
         .end-result {
-            height: 75vh;
-            width: 90%;
             border-radius: 5px;
             margin: auto;
             background: rgb(158, 13, 158);
@@ -60,7 +58,7 @@
         <label for="inv-duration">How long will you invest your money? Enter in quarters: </label>
         <input name="inv-duration" id="inv-duration" type="number" min="1" max="1000" step="1" required>
 
-        <button type="submit" onclick="dividendCompound()">Submit</button>
+        <button id="submit-btn" type="submit">Submit</button>
     </form>
     <div class="end-result" id="result-box">
         <p id="results"></p>
