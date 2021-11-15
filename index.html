@@ -49,14 +49,14 @@
     <p>See your money grow with dividends...</p>
 
     <form class="form dividend-form" id="div-yield-form">
-        <label for="initial-inv">How much did you invest? Enter in USD:</label>
+        <label for="initial-inv">How much did you invest? Enter in USD.</label>
         <input name="initial-inv" id="initial-inv" type="number" min="0" max="1000000000000" required>
 
-        <label for="yield">What was the dividend yield per quarter (4% annually = 1% per quarter)?:</label>
-        <input name="yield" id="yield" type="number" min="0" max="4.5" step="0.1" required>
+        <label for="yield">What was the dividend yield annually?</label>
+        <input name="yield" id="yield" type="number" min="0" max="20" step="0.01" required>
 
-        <label for="inv-duration">How long will you invest your money? Enter in quarters: </label>
-        <input name="inv-duration" id="inv-duration" type="number" min="1" max="1000" step="1" required>
+        <label for="inv-duration">How long will you invest your money? Enter in years. </label>
+        <input name="inv-duration" id="inv-duration" type="number" min="0" max="250" step="0.1" required>
 
         <button id="submit-btn" type="submit">Submit</button>
     </form>
