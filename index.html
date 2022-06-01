@@ -29,10 +29,13 @@
             font-size: 2.5rem;
         }
 
-        .end-result {
-            border-radius: 5px;
+        #div-yield-form {
+            width: 80vw;
             margin: auto;
-            background: rgb(158, 13, 158);
+        }
+
+        .end-result {
+            margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +43,8 @@
         }
 
         #results {
-            color: white;
+            color: grey;
+            font-size: 3.5rem;
         }
     </style>
 </head>
@@ -53,7 +57,7 @@
         <input name="initial-inv" id="initial-inv" type="number" min="0" max="1000000000000" required>
 
         <label for="yield">What was the dividend yield annually?</label>
-        <input name="yield" id="yield" type="number" min="0" max="20" step="0.01" required>
+        <input name="yield" id="yield" type="number" min="0" max="20" step="0.005" required>
 
         <label for="inv-duration">How long will you invest your money? Enter in years. </label>
         <input name="inv-duration" id="inv-duration" type="number" min="0" max="250" step="0.1" required>
