@@ -29,7 +29,9 @@ function dividendCompound() {
     finalAmount = initial * (Math.pow((1 + (divYield / n)), (n * years)));
     console.log(finalAmount);
     resultBox.style.display = 'block';
-    results.innerHTML = `By the end of ${years} year(s), you will have about $${Math.floor(finalAmount)}`;
+    results.innerHTML = `By the end of ${years} year(s), 
+    you will have about <br> <strong>$${Math.floor(finalAmount)}</strong>, 
+    meaning a(n) <strong>${Math.floor((finalAmount / initial - 1) * 100)}% gain</strong>.`;
 }
 
 submit.addEventListener('click', dividendCompound);
