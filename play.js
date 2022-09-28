@@ -30,7 +30,7 @@ function dividendCompound() {
     console.log(finalAmount);
     resultBox.style.display = 'block';
     results.innerHTML = `By the end of ${years} year(s), 
-    you will have about <br> <strong>$${finalAmount.toFixed(2)}</strong>, 
+    you will have about <br> <strong>$${addCommas(finalAmount.toFixed(2))}</strong>, 
     meaning a(n) <strong>${addCommas(Math.floor((finalAmount / initial - 1) * 100))}% gain</strong>.`;
 }
 
