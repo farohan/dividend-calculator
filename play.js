@@ -30,8 +30,12 @@ function dividendCompound() {
     console.log(finalAmount);
     resultBox.style.display = 'block';
     results.innerHTML = `By the end of ${years} year(s), 
-    you will have about <br> <strong>$${Math.floor(finalAmount)}</strong>, 
-    meaning a(n) <strong>${Math.floor((finalAmount / initial - 1) * 100)}% gain</strong>.`;
+    you will have about <br> <strong>$${finalAmount.toFixed(2)}</strong>, 
+    meaning a(n) <strong>${addCommas(Math.floor((finalAmount / initial - 1) * 100))}% gain</strong>.`;
 }
 
 submit.addEventListener('click', dividendCompound);
+
+function addCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
